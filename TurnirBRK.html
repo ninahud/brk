@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Турниры</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Функция для добавления класса с анимацией исчезновения через 3 секунды
+        setTimeout(function() {
+            var element = document.getElementById('description');
+            element.classList.add('fade-out');
+        }, 3000);
+    </script>
+
+    <style>
+        /* CSS стили для свечения вкладок */
+        .tab-item {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tab-item::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: white;
+            transition: width 0.3s;
+        }
+
+        .tab-item:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="TurnirBRK.html" id="TurnirBRK" class="tab-item">Главная</a></li>
+                <li><a href="schedule.html" id="schedule" class="tab-item">Расписание</a></li>
+                <li><a href="#participants" id="participants" class="tab-item">Участники</a></li>
+                <li><a href="#contacts" id="contacts" class="tab-item">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tab" id="home-tab">
+            <!-- Содержимое вкладки "Главная" -->
+        </div>
+
+        <div class="tab" id="schedule-tab">
+            <!-- Содержимое вкладки "Расписание" -->
+        </div>
+
+        <div class="tab" id="participants-tab">
+            <!-- Содержимое вкладки "Участники" -->
+        </div>
+
+        <div class="tab" id="contacts-tab">
+            <!-- Содержимое вкладки "Контакты" -->
+        </div>
+
+        <h1>Добро пожаловать на CS2 турниры</h1>
+        <p id="description">Здесь вы найдете все необходимые материалы и информацию о предстоящих событиях и участниках, а также сможете следить за результатами матчей.</p>
+
+        <section class="tournament-news">
+            <h2>Последние новости</h2>
+            <p>Команда IPROL берут победу у команды DOHLIKI со счетом 2:1
+            </p>
+            <!-- Здесь можно добавить другие новости -->
+              
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CS2 Турниры. Все права защищены</p>
+    </footer>
+</body>
+
+</html>
